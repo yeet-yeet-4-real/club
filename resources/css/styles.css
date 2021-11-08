@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fruktur&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/*
+background-color: hsl(210, 70%, 4%);
+color: rgb(238, 238, 238);
+background-color: hsla(194, 39%, 33%, 0.575);
+background-color: rgb(233, 233, 233);
+color: hsl(0, 6%, 94%);
+color: hsl(0, 6%, 94%);
+border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+color: rgba(26, 24, 24, 0.801);
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 1.6;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.1rem;
+    background-color: hsla(194, 39%, 33%, 0.575);
+}
+
+#navbar ul {
+    list-style-type: none;
+    color: hsl(0, 0%, 17%);
+}
+
+#navbar ul li {
+    display: inline-block;
+    padding: 8px;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: hsl(0, 0%, 17%);
+}
+
+#banner {
+    width: 100%;
+    padding: 2rem;
+    height: 70vh;
+    background: url('../img/header_frontpage_1.jpg');
+    position: relative;
+}
+
+#banner::before {
+    content: "";
+    position: absolute;
+    background-color: rgb(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#banner h1 {
+    letter-spacing: .5rem;
+    width: 40%;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+#banner h3 {
+    letter-spacing: .2rem;
+    /* font-size: 2rem; */
+}
+
+#banner h1,
+#banner h3 {
+    font-family: 'Roboto', sans-serif;
+    padding: 1rem;
+    color: #fff;
+    position: relative;
+    top: 20%;
+}
+
+#content-gallery {
+    text-align: center;
+    padding: 2rem;
+    width: 80%;
+    margin: 2rem auto;
+}
+
+.gallery {
+    display: grid;
+    height: 100%;
+    grid-template: repeat(2, 350px) / repeat(6, 1fr);
+    gap: 1rem;
+    grid-auto-rows: 1fr;
+    grid-auto-columns: 1fr;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+}
+
+.item-1 {
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+}
+
+.item-2 {
+    grid-row: 1 / 3;
+    grid-column: 3 / 4;
+}
+
+.item-3 {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+
+.item-4 {
+    grid-row: 1 / 2;
+    grid-column: 4 / 7;
+}
+
+.item-5 {
+    grid-row: 2 / 3;
+    grid-column: 4 / 7;
+}
+
+.item-6 {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+
+footer {
+    color: #fff;
+    background-color: rgb(53, 52, 52);
+    text-align: center;
+    padding: 1.1rem;
+}
+
+footer a {
+    color: rgb(121, 137, 233);
+}
+
+.info {
+    width: 100%;
+    text-align: center;
+    padding: 1.2rem;
+    background-color: hsla(194, 39%, 33%, 0.575);
+}
+
+.info h2 {
+    margin: auto;
+    width: 60%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.info h3 {
+    padding: 1rem;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+.info p {
+    padding: 1rem;
+    width: 80%;
+    margin: auto;
+}
+
+.info p:nth-child(even) {
+    text-align: left;
+}
+
+.info p:nth-child(odd) {
+    text-align: right;
+}
+
+#team {
+    width: 100%;
+    background: url('../img/Photoshop-Replace-Background-Featured.jpg');
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    height: 600px;
+    padding: 2rem;
+    letter-spacing: 2px;
+}
+
+.cards {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#team .card {
+    padding: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.4);
+}
+
+#team .card h3 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+#team .card img {
+    width: 100%;
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 750px) {
+
+    #banner h1 {
+        letter-spacing: .5rem;
+        font-size: 5rem;
+        width: 40%;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    #banner h3 {
+        letter-spacing: .2rem;
+        font-size: 2rem;
+    }
+
+    .gallery {
+        display: grid;
+        height: 100%;
+        grid-template: repeat(3, 1fr) / repeat(6, 1fr);
+        gap: 1rem;
+        grid-auto-rows: 1fr;
+        grid-auto-columns: 1fr;
+    }
+
+    .item-1 {
+        grid-row: 1 / 2;
+        grid-column: 1 / 4;
+    }
+    
+    .item-2 {
+        grid-row: 2 / 4;
+        grid-column: 5 / 7;
+    }
+    
+    .item-3 {
+        grid-row: 2 / 3;
+        grid-column: 1 / 3;
+    }
+    
+    .item-4 {
+        grid-row: 1 / 2;
+        grid-column: 4 / 7;
+    }
+    
+    .item-5 {
+        grid-row: 3 / 4;
+        grid-column: 1 / 5;
+    }
+    
+    .item-6 {
+        grid-row: 2 / 3;
+        grid-column: 3 / 5;
+    }
+    
+    #team {
+        width: 100%;
+        background: url('../img/Photoshop-Replace-Background-Featured.jpg');
+        background-size: cover;
+        background-position: center center;
+        text-align: center;
+        height: inherit;
+        padding: 2rem;
+        letter-spacing: 2px;
+    }
+
+    .cards {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .card {
+        margin: 1rem;
+    }
+
+}
+
+@media only screen and (max-width: 749px) {
+    
+    header {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #navbar ul li {
+        padding: 0 20px;
+    }
+
+    #banner {
+
+        width: 100%;
+        padding: 1.2rem;
+        height: 70vh;
+    }
+
+    h1,
+    h3 {
+        text-align: center;
+    }
+
+    #banner h1 {
+        letter-spacing: .5rem;
+        font-size: 2.5rem;
+        margin: auto;
+        width: 90%;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    #banner h3 {
+        letter-spacing: .2rem;
+        font-size: 1.2rem;
+    }
+
+    .gallery {
+        display: grid;
+        height: 100%;
+        grid-template: repeat(6, 1fr) / repeat(6, 1fr);
+        gap: 1rem;
+        grid-auto-rows: 1fr;
+        grid-auto-columns: 1fr;
+    }
+
+    .gallery-item {
+        height: 300px;
+    }
+
+    .item-1 {
+        grid-row: 1 / 2;
+        grid-column: 1 / 7;
+    }
+    
+    .item-2 {
+        grid-row: 5 / 6;
+        grid-column: 1 / 7;
+    }
+    
+    .item-3 {
+        grid-row: 6 / 7;
+        grid-column: 1 / 7;
+    }
+    
+    .item-4 {
+        grid-row: 2 / 3;
+        grid-column: 1 / 7;
+    }
+    
+    .item-5 {
+        grid-row: 4 / 5;
+        grid-column: 1 / 7;
+    }
+    
+    .item-6 {
+        grid-row: 3 / 4;
+        grid-column: 1 / 7;
+    }
+
+    .info p {
+        /* padding: 1rem; */
+        /* width: 80%; */
+        margin: auto;
+    }
+
+    .info p:nth-child(1n) {
+        text-align: center;
+    }
+
+    #team {
+        width: 100%;
+        background: url('../img/Photoshop-Replace-Background-Featured.jpg');
+        background-size: cover;
+        background-position: center center;
+        text-align: center;
+        height: inherit;
+        padding: 2rem;
+        letter-spacing: 2px;
+    }
+
+    .cards {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .card {
+        margin: 1rem;
+    }
+}
